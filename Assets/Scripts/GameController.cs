@@ -53,14 +53,14 @@ public class GameController : MonoBehaviour
     [SerializeField] private float timeBeforeEnd = 0.0f;
 
     #region Game Routines
-    [Tooltip("The starter for time routines")]
-    [SerializeField] private IGameRoutine timeRoutineStarter;
+    [Tooltip("The starter for singleplayer routines")]
+    [SerializeField] private IGameRoutine singleplayerRoutine;
 
-    [Tooltip("The starter for life routines")]
-    [SerializeField] private IGameRoutine lifeRoutineStarter;
+    [Tooltip("The starter for multiplayer routines")]
+    [SerializeField] private IGameRoutine multiplayerRoutine;
 
     [Tooltip("Set to true if the game should use the lives routine")]
-    [SerializeField] private bool useLifeRoutine = false;
+    [SerializeField] private bool isSingleplayer = false;
 
     /// <summary>
     /// The reference to the current routine being used for gameplay.
@@ -165,13 +165,13 @@ public class GameController : MonoBehaviour
     {
         Instance = this;
 
-        if (useLifeRoutine)
+        if (isSingleplayer)
         {
-            currentGameplayroutine = lifeRoutineStarter;
+            currentGameplayroutine = singleplayerRoutine;
         }
         else
         {
-            currentGameplayroutine = timeRoutineStarter;
+            currentGameplayroutine = multiplayerRoutine;
         }
 
         InitializeComponents();

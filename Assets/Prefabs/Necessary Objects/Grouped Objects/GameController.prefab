@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5727878375005655202}
-  - component: {fileID: 173333873873615636}
+  - component: {fileID: 2277345323534385568}
   m_Layer: 0
-  m_Name: LivesRoutine
+  m_Name: Singleplayer Routine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,9 +30,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5900019085141536508}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &173333873873615636
+--- !u!114 &2277345323534385568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,10 +41,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1846723116239267344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74a0dec73210b9c4bb89744f00dd2569, type: 3}
+  m_Script: {fileID: 11500000, guid: f2ce74a4a4d768f4f8348990e75cad04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfLives: 030000000500000007000000
 --- !u!1 &5900019085141536385
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,8 +74,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3153702548654323822}
   - {fileID: 5727878375005655202}
+  - {fileID: 3153702548654323822}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -189,9 +188,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBeforeEnd: 1
-  timeRoutineStarter: {fileID: 705077611930334608}
-  lifeRoutineStarter: {fileID: 173333873873615636}
-  useLifeRoutine: 0
+  singleplayerRoutine: {fileID: 2277345323534385568}
+  multiplayerRoutine: {fileID: 5499653504385736330}
+  isSingleplayer: 1
   StartGameplay:
     m_PersistentCalls:
       m_Calls: []
@@ -211,9 +210,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3153702548654323822}
-  - component: {fileID: 705077611930334608}
+  - component: {fileID: 5499653504385736330}
   m_Layer: 0
-  m_Name: TimerRoutine
+  m_Name: Multiplayer Routine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,9 +231,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5900019085141536508}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &705077611930334608
+--- !u!114 &5499653504385736330
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,8 +242,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8589346445263584166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a37706ad5eb3e3249a8edd6c00972302, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c83aac127e24e54487521dba9b5abe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showCountdownToEnd: 0
-  timers: 1e0000003c00000078000000
